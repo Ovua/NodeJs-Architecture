@@ -24,7 +24,7 @@ export const getUserById = async (req: Request, res: Response): Promise<void> =>
     }
 };
 
-// getAllUsers
+// Controller per ottenere la lista degli utenti
 export const getAllUsers = async (req: Request, res: Response): Promise<void> => {
     try {
         const users: IUser[] = await User.find();
