@@ -1,7 +1,7 @@
 # Node.js Architecture with MongoDB on Azure Cosmos
 
 ## Overview
-This project showcases a Node.js backend architecture using TypeScript with MongoDB hosted on Azure Cosmos. It includes basic CRUD operations for managing users.
+This project showcases a Node.js backend architecture using TypeScript with MongoDB hosted on Azure Cosmos. It includes basic CRUD operations.
 
 ## Technologies Used
 - Node.js
