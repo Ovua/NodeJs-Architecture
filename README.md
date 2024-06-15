@@ -18,18 +18,13 @@ The project follows a Model-View-Controller (MVC) architecture:
 - **Middleware**: Includes validation middleware using `express-validator`.
 
 ## Setup Instructions
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd <project-folder>
-   ```
 
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Set up environment variables:**
+2. **Set up environment variables:**
    Create a `.env` file in the root directory and add the following:
    ```
    DB_URI=mongodb+srv://<username>:<password>@<your-cosmosdb-account>.mongo.cosmos.azure.com/<database-name>?ssl=true&replicaSet=globaldb
@@ -37,7 +32,7 @@ The project follows a Model-View-Controller (MVC) architecture:
    ```
    Replace `<username>`, `<password>`, `<your-cosmosdb-account>`, and `<database-name>` with your actual MongoDB credentials and database information.
 
-4. **Run the application:**
+3. **Run the application:**
    ```bash
    npm start
    ```
