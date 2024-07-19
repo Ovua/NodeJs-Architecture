@@ -1,28 +1,18 @@
-import { Request, Response, NextFunction } from 'express';
-import { body, validationResult } from 'express-validator';
+import { Request, Response, NextFunction } from "express";
+import Joi from "joi";
 
-// Middleware di validazione per la creazione di un nuovo utente
+// Middleware validation for creating a new user
 export const validateCreateUser = [
-    body('name').notEmpty().withMessage('Il nome è obbligatorio'),
-    body('email').isEmail().withMessage('Email non valida'),
-    body('password').isLength({ min: 8 }).withMessage('La password deve avere almeno 8 caratteri'),
-    handleValidationErrors
+  {
+    name: Joi.string().max(30).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).required,
+  },
 ];
 
-// Middleware di validazione per l'aggiornamento di un utente esistente
-export const validateUpdateUser = [
-    body('name').optional().notEmpty().withMessage('Il nome è obbligatorio'),
-    body('email').optional().isEmail().withMessage('Email non valida'),
-    body('password').optional().isLength({ min: 8 }).withMessage('La password deve avere almeno 8 caratteri'),
-    handleValidationErrors
-];
-
-// Middleware per gestire gli errori di validazione
-function handleValidationErrors(req: Request, res: Response, next: NextFunction): void {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        res.status(400).json({ errors: errors.array() });
-        return;
-    }
-    next();
-}
+// Middleware validation for updating a user
+export const validateUpdateUser = [{
+    name: Joi.string().max(30).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).required,
+}];
