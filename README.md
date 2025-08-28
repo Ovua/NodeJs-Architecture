@@ -28,7 +28,7 @@ The project follows a Model-View-Controller (MVC) architecture:
    Create a `.env` file in the root directory and add the following:
    ```
    DB_URI=mongodb+srv://<username>:<password>@<your-cosmosdb-account>.mongo.cosmos.azure.com/<database-name>?ssl=true&replicaSet=globaldb
-   PORT=3000
+   PORT=8080
    ```
    Replace `<username>`, `<password>`, `<your-cosmosdb-account>`, and `<database-name>` with your actual MongoDB credentials and database information.
 
@@ -36,7 +36,7 @@ The project follows a Model-View-Controller (MVC) architecture:
    ```bash
    npm start
    ```
-   This will start the server at `http://localhost:3000`.
+   This will start the server at `http://localhost:8080`.
 
 
 ## Development

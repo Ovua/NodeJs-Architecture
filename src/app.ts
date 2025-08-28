@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 // Connessione al database MongoDB
 
 mongoose.connect(dbUri)
-.then(() => console.log('Connessione al database MongoDB avvenuta con successo'))
+.then(() => console.log('DB Connection successful '))
 .catch((err: any) => console.error('Errore durante la connessione al database:', err));
 
 // Middleware per gestire le rotte degli utenti
@@ -32,7 +32,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 // Avvio del server
-const port: number = parseInt(process.env.PORT as string, 10) || 3000;
+const port: number = parseInt(process.env.PORT as string, 10) || 8080;
 app.listen(port, () => {
     console.log(`Server in ascolto sulla porta ${port}`);
 });
